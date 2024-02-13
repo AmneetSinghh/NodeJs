@@ -1,0 +1,22 @@
+/*
+
+1. how sockets work ( internally automatically stores number of connections )
+2. client uses emit for sending to server
+3. server uses emit for sending to all clients
+4. no limit to number of socket event handlers ( socket.on(''))
+5. client buffers messages (if client is disconnected or server not available)
+6. used offset, so while re-establishment server can send missing messsages to clients.
+7. sqlite db for persistance messages.
+8. socket.recovered will run everytime , after connection reesablishment.
+9. client needs retry mechanism or acknowledge because if server not able to process message or  not able to persist
+
+
+
+
+learnings from private Messanging tutorial : 
+
+1. how to perform private messaging
+2. application flow is : : sender -> whatsapp-server -> recipient.
+3. when new client joins, need to broadcast into every user that is connected to whatsp server ( so that it can be shown in frontend)
+4. when user click on chat, need to fetch full chat from bakend. only for that user.
+*/
